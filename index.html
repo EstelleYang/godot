@@ -1,12 +1,14 @@
 ---
-title: Hello, My Blog
-layout: default.html
+layout: default
+title: 等待戈多
 ---
 
-{{ page.title }}
+<h2>{{ page.title }}</h2>
+<p>最新文章</p>
+<ul>
+	{% for post in site.posts %}
+		<li>{{ post.date|date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+</ul>
 
-{% for post in site.posts %}
 
-{{ post.date|date_to_string }} <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
-
-{% endfor %}
