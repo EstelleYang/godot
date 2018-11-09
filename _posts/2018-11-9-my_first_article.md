@@ -1,5 +1,6 @@
 ---
 title: 我的第一篇文章
+layout: default.html
 ---
 
 # {{ page.title }}
